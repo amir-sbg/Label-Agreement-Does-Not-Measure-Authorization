@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://neurips.cc/"><img src="https://img.shields.io/badge/NeurIPS-2026-7256B8.svg?labelColor=ECEAF4" alt="NeurIPS 2026"></a>
-  <a href="https://aim-neurips26.github.io/"><img src="https://img.shields.io/badge/AIM-Workshop-4C72B0.svg" alt="AIM Workshop"></a>
+  <a href="https://aim-neurips26.github.io/"><img src="docs/badges/aim-workshop.svg" alt="AIM Workshop"></a>
   <img src="https://img.shields.io/badge/Python-3.11-3776AB.svg" alt="Python 3.11">
   <img src="https://img.shields.io/badge/status-research%20code-lightgrey.svg" alt="Research code">
 </p>
