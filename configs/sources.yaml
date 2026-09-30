@@ -1,0 +1,226 @@
+version: 1
+source_roots:
+  metadata: ${NEUROMARK_ROOT}/Data
+  results: ${NEUROMARK_ROOT}/Results
+artifacts:
+  - artifact_id: cobre_pheno_strings
+    study: COBRE
+    path: ${NEUROMARK_ROOT}/Data/COBRE/Data_info/pheno_comb_cobre_all.csv
+    kind: table
+    primary_role: mixed
+    component_roles: [subject_list, demographics, diagnosis_or_labels]
+    selected_columns: [URSI, Age, Sex, Diagnosis]
+    id_columns: [URSI]
+    role_basis: explicit column structure and observed low-cardinality values
+    validity_status: structure_verified
+    lineage_family: cobre_compact_phenotype
+
+  - artifact_id: cobre_pheno_explicit_codes
+    study: COBRE
+    path: ${NEUROMARK_ROOT}/Data/COBRE/Data_info/COBRE_Phenotypic_File_ZeningFu.xlsx
+    kind: workbook
+    primary_role: mixed
+    component_roles: [subject_list, demographics, diagnosis_or_labels, clinical_scale, medication]
+    selected_sheets: [Sheet1]
+    selected_columns:
+      - ID
+      - "'age'"
+      - "'gender(1:male; 2:female)'"
+      - "'diagnosis(1:SZ; 2:HC; 0:BP; -1:SZA)'"
+      - "'PANSS(positive)'"
+      - "'PANSS(negative)'"
+      - "'PANSS(gentotal)'"
+      - "'CPZ'"
+    id_columns: [ID]
+    role_basis: headers contain explicit code direction and named measures
+    validity_status: structure_and_encoding_verified
+    lineage_family: cobre_compact_phenotype
+
+  - artifact_id: cobre_vince_summary
+    study: COBRE
+    path: ${NEUROMARK_ROOT}/Data/COBRE/Data_info/COBRE_fromVince.csv
+    kind: table
+    primary_role: mixed
+    component_roles: [subject_list, demographics, diagnosis_or_labels, clinical_scale, medication, cognitive]
+    selected_columns: [SubjID, Dx, Age, Sex, AP, CPZ, AO, DURILL, PANSSTOT, PANSSPOS, PANSSNEG, IQ]
+    id_columns: [SubjID]
+    role_basis: mixed compact subject-level schema
+    validity_status: structure_verified_semantics_partial
+    lineage_family: cobre_vince_summary
+
+  - artifact_id: cobre_panss_items
+    study: COBRE
+    path: ${NEUROMARK_ROOT}/Data/COBRE/Data_info/PANSS_COBRE.csv
+    kind: table
+    primary_role: clinical_scale
+    component_roles: [subject_list, visit_metadata, clinical_scale]
+    selected_columns: [Anonymized ID, Subject Type, Visit, Delusions, Hallucinatory Behavior, Blunted Affect, Poor Attention]
+    id_columns: [Anonymized ID]
+    role_basis: PANSS item names and visit fields
+    validity_status: structure_verified
+    lineage_family: cobre_panss_export
+
+  - artifact_id: cobre_refined_mixed
+    study: COBRE
+    path: ${NEUROMARK_ROOT}/Data/COBRE/Data_info/COBRE_Data_refined.xlsx
+    kind: workbook
+    primary_role: mixed
+    component_roles: [subject_list, demographics, diagnosis_or_labels, clinical_scale, medication, medical_history, cognitive]
+    selected_sheets: [Final Sheet_merge, Demographic, PANNS, Medication, Med Hx, Neuropsych]
+    selected_columns: [Subject ID, Current Age, Gender, Age at first psychiatric illness, queried_ursi, site_id, visit, assessment_id]
+    id_columns: [Subject ID, queried_ursi, assessment_id, site_id]
+    role_basis: multiple role-specific sheets and merged subject table
+    validity_status: structure_verified_semantics_partial
+    lineage_family: cobre_refined_family
+
+  - artifact_id: cobre_panss_mixed_workbook
+    study: COBRE
+    path: ${NEUROMARK_ROOT}/Data/COBRE/Data_info/COBRE/COBRE_PANSS.xlsx
+    kind: workbook
+    primary_role: mixed
+    component_roles: [subject_list, demographics, diagnosis_or_labels, clinical_scale, medication, medical_history, cognitive]
+    selected_sheets: [Final Sheet_merge, Demographic, PANSS, Medication, Med Hx, Neuropsych]
+    selected_columns: [Subject ID, Current Age, Gender, Age at first psychiatric illness, queried_ursi, site_id, visit, assessment_id]
+    id_columns: [Subject ID, queried_ursi, assessment_id, site_id]
+    role_basis: multiple role-specific sheets and merged subject table
+    validity_status: structure_verified_semantics_partial
+    lineage_family: cobre_refined_family
+
+  - artifact_id: cobre_med_dictionary_workbook
+    study: COBRE
+    path: ${NEUROMARK_ROOT}/Data/COBRE/Data_info/COBRE_Med.xlsx
+    kind: workbook
+    primary_role: mixed
+    component_roles: [medication, dictionary_or_codebook, subject_list, visit_metadata]
+    selected_sheets: [Data, Dictionary]
+    selected_columns: [URSI, instrument_id, instrument_label, visit, assessment_date, site_id, Question ID, Question Description, Response Description, Response Value]
+    id_columns: [URSI, instrument_id, site_id]
+    role_basis: separate data and dictionary sheets
+    validity_status: structure_verified_semantics_partial
+    lineage_family: cobre_med_export
+
+  - artifact_id: cobre_cognitive
+    study: COBRE
+    path: ${NEUROMARK_ROOT}/Data/COBRE/Data_info/COBRE/COBRE_Cognitive.xlsx
+    kind: workbook
+    primary_role: cognitive
+    component_roles: [subject_list, demographics, cognitive]
+    selected_sheets: [Cognitive]
+    selected_columns: [usrd, Age, Gender, Ethnicity, Education, WTAR_StandardScore, WASI_Verbal_IQ, WASI_Performance_IQ]
+    id_columns: [usrd]
+    role_basis: named neuropsychological measures
+    validity_status: structure_verified
+    lineage_family: cobre_cognitive_export
+
+  - artifact_id: fbirn_cminds
+    study: FBIRN
+    path: ${NEUROMARK_ROOT}/Data/FBIRN/Data_info/FBIRN/FBIRN_CMINDs_20190801.xlsx
+    kind: workbook
+    primary_role: mixed
+    component_roles: [subject_list, demographics, diagnosis_or_labels, cognitive]
+    selected_sheets: [Sheet1]
+    selected_columns: [SubjectID, sDEMOG_DIAGNOSIS, sDEMOG_GENDER, nDEMOG_CUR_AGE, SpeedOfProcessing, AttentionVigilance, WorkingMemory, CMINDS_composite]
+    id_columns: [SubjectID]
+    role_basis: compact subject-level CMINDS export
+    validity_status: structure_verified_values_cross_checked
+    lineage_family: fbirn_cminds_export
+
+  - artifact_id: fbirn_cminds_dictionary
+    study: FBIRN
+    path: ${NEUROMARK_ROOT}/Data/FBIRN/Data_info/CMINDs/CMINDS_Data_Dictionary_FBIRN.xls
+    kind: workbook
+    primary_role: dictionary_or_codebook
+    component_roles: [dictionary_or_codebook, cognitive]
+    selected_sheets: ["1st 13 variables in each table", PRE, NAART, SVLT, dSVLT, SpatialSpan, TrA, TrB, FingTap, SymDig, MzSlvng, VFLT, dVFLT, LetNum, LetFlu, CatFlu, EmoDis, Stroop, "CPT(IP)", CardSort]
+    selected_columns: [Field_Name, NewName, Name, Abbreviation, Description, Valid_Values]
+    id_columns: []
+    role_basis: dictionary schema with definitions and valid values
+    validity_status: structure_verified_reference_scope_cognitive
+    lineage_family: fbirn_cminds_dictionary
+
+  - artifact_id: fbirn_clin
+    study: FBIRN
+    path: ${NEUROMARK_ROOT}/Data/FBIRN/Data_info/FBIRN/FBIRN_CLIN_20190801.xlsx
+    kind: workbook
+    primary_role: mixed
+    component_roles: [subject_list, site_metadata, visit_metadata, clinical_scale, demographics, diagnosis_or_labels, medication]
+    selected_sheets: [Sheet1]
+    selected_columns: [SubjectID, SiteID, ExperimentID, VisitID, SegmentID, Combined_Assessment_nPANSS_DELUSIONS, Demographics_nDEMOG_CUR_AGE, Demographics_nDEMOG_DIAGNOSIS, Demographics_sDEMOG_GENDER]
+    id_columns: [SubjectID, SiteID, ExperimentID, VisitID, SegmentID]
+    role_basis: wide clinical table with explicit instrument-prefixed names
+    validity_status: structure_verified_semantics_partial
+    lineage_family: fbirn_clin_export
+
+  - artifact_id: fbirn_cpz
+    study: FBIRN
+    path: ${NEUROMARK_ROOT}/Data/FBIRN/Data_info/FBIRN/FBIRN_CPZ_20190801.xlsx
+    kind: workbook
+    primary_role: medication
+    component_roles: [subject_list, site_metadata, visit_metadata, medication]
+    selected_sheets: [Sheet1]
+    selected_columns: [SubjectID, SiteID, VisitID, sDEMOG_CUR_AP_DRUG_COR_SPELLING, nDEMOG_CUR_AP_GEN1_DOSE_MG, nDEMOG_CUR_AP_GEN2_DOSE_MG, CPZ1, CPZ2, CPZ]
+    id_columns: [SubjectID, SiteID, VisitID]
+    role_basis: medication names, dose fields, and CPZ columns
+    validity_status: structure_verified_policy_unverified
+    lineage_family: fbirn_cpz_export
+
+  - artifact_id: fbirn_panss
+    study: FBIRN
+    path: ${NEUROMARK_ROOT}/Data/FBIRN/Data_info/FBIRN/FBIRN_PANSS_20190801.xlsx
+    kind: workbook
+    primary_role: clinical_scale
+    component_roles: [subject_list, clinical_scale]
+    selected_sheets: [Sheet1]
+    selected_columns: [DOI, Positive, Negative]
+    id_columns: [DOI]
+    role_basis: PANSS positive and negative summary columns
+    validity_status: structure_verified_semantics_partial
+    lineage_family: fbirn_panss_export
+
+  - artifact_id: cobre_subject_bridge
+    study: COBRE
+    path: ${NEUROMARK_ROOT}/Results/Subject_selection/COBRE/sub_info_COBRE.mat
+    kind: matlab_bridge
+    primary_role: subject_list
+    component_roles: [subject_list, imaging_linkage, harmonized_analysis_metadata]
+    selected_columns: [analysis_ID, FILE_ID, analysis_SCORE]
+    id_columns: [analysis_ID]
+    role_basis: subject-selection artifact aligned to imaging analysis
+    validity_status: alignment_verified
+    lineage_family: cobre_analysis_bridge
+
+  - artifact_id: fbirn_subject_bridge
+    study: FBIRN
+    path: ${NEUROMARK_ROOT}/Results/Subject_selection/FBIRN/sub_info_FBIRN.mat
+    kind: matlab_bridge
+    primary_role: subject_list
+    component_roles: [subject_list, imaging_linkage, harmonized_analysis_metadata]
+    selected_columns: [analysis_ID, FILE_ID, analysis_SCORE]
+    id_columns: [analysis_ID]
+    role_basis: subject-selection artifact aligned to imaging analysis
+    validity_status: alignment_verified
+    lineage_family: fbirn_analysis_bridge
+
+  - artifact_id: cobre_sfnc
+    study: COBRE
+    path: ${NEUROMARK_ROOT}/Results/SFNC/COBRE/COBRE.mat
+    kind: matlab_imaging
+    primary_role: imaging_derivative
+    component_roles: [imaging_derivative, imaging_linkage]
+    selected_columns: [analysis_ID, sFNC]
+    id_columns: [analysis_ID]
+    role_basis: subject-indexed static functional connectivity tensor
+    validity_status: alignment_verified
+    lineage_family: cobre_sfnc
+
+  - artifact_id: fbirn_sfnc
+    study: FBIRN
+    path: ${NEUROMARK_ROOT}/Results/SFNC/FBIRN/FBIRN.mat
+    kind: matlab_imaging
+    primary_role: imaging_derivative
+    component_roles: [imaging_derivative, imaging_linkage]
+    selected_columns: [analysis_ID, sFNC]
+    id_columns: [analysis_ID]
+    role_basis: subject-indexed static functional connectivity tensor
+    validity_status: alignment_verified
+    lineage_family: fbirn_sfnc

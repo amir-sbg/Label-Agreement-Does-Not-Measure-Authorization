@@ -1,0 +1,49 @@
+version: 1
+file_roles:
+  - subject_list
+  - demographics
+  - diagnosis_or_labels
+  - clinical_scale
+  - cognitive
+  - medication
+  - dictionary_or_codebook
+  - scanner_or_site_metadata
+  - visit_metadata
+  - imaging_derivative
+  - mixed
+  - ambiguous
+  - unknown
+column_concepts:
+  - subject_identifier
+  - site_identifier
+  - visit_identifier
+  - experiment_identifier
+  - assessment_identifier
+  - diagnosis
+  - sex_or_gender
+  - current_age
+  - age_at_onset
+  - panss_item
+  - panss_positive
+  - panss_negative
+  - panss_total
+  - medication_name
+  - medication_dose
+  - cpz_candidate
+  - cognitive_domain
+  - imaging_feature
+  - unknown_or_study_specific
+terminal_actions:
+  - recover
+  - accept_provisionally
+  - abstain
+integrity_concepts:
+  - imaging_row_alignment
+  - identifier_linkage
+  - source_independence
+  - escalate
+governance_concepts:
+  - diagnosis_inclusion_policy
+  - cpz_conversion_policy
+  - authoritative_source_selection
+  - construct_equivalence

@@ -1,0 +1,22 @@
+{
+  "n_base_artifacts": 54,
+  "n_cases": 90,
+  "oracle_status": "synthetic_exact_operational_only",
+  "paired_counterfactual": true,
+  "raw_tables": [
+    "tables/site_a_clinical.csv",
+    "tables/site_a_demographics.csv",
+    "tables/site_a_dictionary.csv",
+    "tables/site_a_mixed_export.csv",
+    "tables/site_a_sfnc_summary.csv"
+  ],
+  "seed": 20260821,
+  "task_counts": {
+    "T-COL": 48,
+    "T-FILE": 24,
+    "T-GOV": 6,
+    "T-ID": 6,
+    "T-VAL": 6
+  },
+  "version": "synthetic_v1"
+}

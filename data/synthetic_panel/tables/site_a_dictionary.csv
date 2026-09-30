@@ -1,0 +1,5 @@
+variable,code,meaning
+dx_code,0,control
+dx_code,1,schizophrenia
+sex_code,1,male
+sex_code,2,female

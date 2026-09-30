@@ -1,0 +1,685 @@
+{
+  "cec": {
+    "families": {
+      "T-FILE:parser": {
+        "mutated_oracle_strength": "policy-derived",
+        "n": 10
+      },
+      "T-ID:imaging_order": {
+        "mutated_oracle_strength": "mechanistic",
+        "n": 30
+      },
+      "T-ID:lineage": {
+        "mutated_oracle_strength": "mechanistic (OOD value)",
+        "n": 4
+      },
+      "T-ID:linkage": {
+        "mutated_oracle_strength": "mechanistic",
+        "n": 6
+      },
+      "T-VAL:encoding": {
+        "mutated_oracle_strength": "mechanistic",
+        "n": 8
+      }
+    },
+    "n_pairs": 58,
+    "systems": {
+      "deterministic_reference": {
+        "all": {
+          "cec": 0.9482758620689655,
+          "mutated_side": 1.0,
+          "n": 58,
+          "original_side": 0.9482758620689655,
+          "paired": {
+            "correct_correct": 55,
+            "correct_wrong": 0,
+            "wrong_correct": 3,
+            "wrong_wrong": 0
+          }
+        },
+        "by_family": {
+          "T-FILE:parser": {
+            "cec": 0.7,
+            "mutated_side": 1.0,
+            "n": 10,
+            "original_side": 0.7,
+            "paired": {
+              "correct_correct": 7,
+              "correct_wrong": 0,
+              "wrong_correct": 3,
+              "wrong_wrong": 0
+            }
+          },
+          "T-ID:imaging_order": {
+            "cec": 1.0,
+            "mutated_side": 1.0,
+            "n": 30,
+            "original_side": 1.0,
+            "paired": {
+              "correct_correct": 30,
+              "correct_wrong": 0,
+              "wrong_correct": 0,
+              "wrong_wrong": 0
+            }
+          },
+          "T-ID:lineage": {
+            "cec": 1.0,
+            "mutated_side": 1.0,
+            "n": 4,
+            "original_side": 1.0,
+            "paired": {
+              "correct_correct": 4,
+              "correct_wrong": 0,
+              "wrong_correct": 0,
+              "wrong_wrong": 0
+            }
+          },
+          "T-ID:linkage": {
+            "cec": 1.0,
+            "mutated_side": 1.0,
+            "n": 6,
+            "original_side": 1.0,
+            "paired": {
+              "correct_correct": 6,
+              "correct_wrong": 0,
+              "wrong_correct": 0,
+              "wrong_wrong": 0
+            }
+          },
+          "T-VAL:encoding": {
+            "cec": 1.0,
+            "mutated_side": 1.0,
+            "n": 8,
+            "original_side": 1.0,
+            "paired": {
+              "correct_correct": 8,
+              "correct_wrong": 0,
+              "wrong_correct": 0,
+              "wrong_wrong": 0
+            }
+          }
+        },
+        "mechanistic_only": {
+          "cec": 1.0,
+          "mutated_side": 1.0,
+          "n": 48,
+          "original_side": 1.0,
+          "paired": {
+            "correct_correct": 48,
+            "correct_wrong": 0,
+            "wrong_correct": 0,
+            "wrong_wrong": 0
+          }
+        }
+      },
+      "frozen_answer": {
+        "all": {
+          "cec": 0.0,
+          "mutated_side": 0.0,
+          "n": 58,
+          "original_side": 1.0,
+          "paired": {
+            "correct_correct": 0,
+            "correct_wrong": 58,
+            "wrong_correct": 0,
+            "wrong_wrong": 0
+          }
+        },
+        "by_family": {
+          "T-FILE:parser": {
+            "cec": 0.0,
+            "mutated_side": 0.0,
+            "n": 10,
+            "original_side": 1.0,
+            "paired": {
+              "correct_correct": 0,
+              "correct_wrong": 10,
+              "wrong_correct": 0,
+              "wrong_wrong": 0
+            }
+          },
+          "T-ID:imaging_order": {
+            "cec": 0.0,
+            "mutated_side": 0.0,
+            "n": 30,
+            "original_side": 1.0,
+            "paired": {
+              "correct_correct": 0,
+              "correct_wrong": 30,
+              "wrong_correct": 0,
+              "wrong_wrong": 0
+            }
+          },
+          "T-ID:lineage": {
+            "cec": 0.0,
+            "mutated_side": 0.0,
+            "n": 4,
+            "original_side": 1.0,
+            "paired": {
+              "correct_correct": 0,
+              "correct_wrong": 4,
+              "wrong_correct": 0,
+              "wrong_wrong": 0
+            }
+          },
+          "T-ID:linkage": {
+            "cec": 0.0,
+            "mutated_side": 0.0,
+            "n": 6,
+            "original_side": 1.0,
+            "paired": {
+              "correct_correct": 0,
+              "correct_wrong": 6,
+              "wrong_correct": 0,
+              "wrong_wrong": 0
+            }
+          },
+          "T-VAL:encoding": {
+            "cec": 0.0,
+            "mutated_side": 0.0,
+            "n": 8,
+            "original_side": 1.0,
+            "paired": {
+              "correct_correct": 0,
+              "correct_wrong": 8,
+              "wrong_correct": 0,
+              "wrong_wrong": 0
+            }
+          }
+        },
+        "mechanistic_only": {
+          "cec": 0.0,
+          "mutated_side": 0.0,
+          "n": 48,
+          "original_side": 1.0,
+          "paired": {
+            "correct_correct": 0,
+            "correct_wrong": 48,
+            "wrong_correct": 0,
+            "wrong_wrong": 0
+          }
+        }
+      }
+    }
+  },
+  "downstream": {
+    "bundles": [
+      {
+        "agreement_with_analysis_reference": 1.0,
+        "bundle_name": "deterministic",
+        "cohort": "COBRE",
+        "cross_validated_auc": 0.7374421678783873,
+        "diagnosis_agreement_n": 157,
+        "diagnosis_coverage": 1.0,
+        "diagnosis_disagreement_n": 0,
+        "diagnosis_labeled_n": 157,
+        "hc_n": 89,
+        "n_rows": 157,
+        "sz_n": 68
+      },
+      {
+        "agreement_with_analysis_reference": 1.0,
+        "bundle_name": "deterministic",
+        "cohort": "FBIRN",
+        "cross_validated_auc": 0.8625,
+        "diagnosis_agreement_n": 311,
+        "diagnosis_coverage": 1.0,
+        "diagnosis_disagreement_n": 0,
+        "diagnosis_labeled_n": 311,
+        "hc_n": 160,
+        "n_rows": 311,
+        "sz_n": 151
+      },
+      {
+        "agreement_with_analysis_reference": 1.0,
+        "bundle_name": "gemma4_ungated",
+        "cohort": "COBRE",
+        "cross_validated_auc": 0.7374421678783873,
+        "diagnosis_agreement_n": 157,
+        "diagnosis_coverage": 1.0,
+        "diagnosis_disagreement_n": 0,
+        "diagnosis_labeled_n": 157,
+        "hc_n": 89,
+        "n_rows": 157,
+        "sz_n": 68
+      },
+      {
+        "agreement_with_analysis_reference": 1.0,
+        "bundle_name": "gemma4_ungated",
+        "cohort": "FBIRN",
+        "cross_validated_auc": 0.8339416058394159,
+        "diagnosis_agreement_n": 281,
+        "diagnosis_coverage": 0.9035369774919614,
+        "diagnosis_disagreement_n": 0,
+        "diagnosis_labeled_n": 281,
+        "hc_n": 144,
+        "n_rows": 311,
+        "sz_n": 137
+      },
+      {
+        "agreement_with_analysis_reference": null,
+        "bundle_name": "gemma4_gated",
+        "cohort": "COBRE",
+        "cross_validated_auc": null,
+        "diagnosis_agreement_n": 0,
+        "diagnosis_coverage": 0.0,
+        "diagnosis_disagreement_n": 0,
+        "diagnosis_labeled_n": 0,
+        "hc_n": 0,
+        "n_rows": 157,
+        "sz_n": 0
+      },
+      {
+        "agreement_with_analysis_reference": 1.0,
+        "bundle_name": "gemma4_gated",
+        "cohort": "FBIRN",
+        "cross_validated_auc": 0.8339416058394159,
+        "diagnosis_agreement_n": 281,
+        "diagnosis_coverage": 0.9035369774919614,
+        "diagnosis_disagreement_n": 0,
+        "diagnosis_labeled_n": 281,
+        "hc_n": 144,
+        "n_rows": 311,
+        "sz_n": 137
+      },
+      {
+        "agreement_with_analysis_reference": 1.0,
+        "bundle_name": "qwen3_ungated",
+        "cohort": "COBRE",
+        "cross_validated_auc": 0.7374421678783873,
+        "diagnosis_agreement_n": 157,
+        "diagnosis_coverage": 1.0,
+        "diagnosis_disagreement_n": 0,
+        "diagnosis_labeled_n": 157,
+        "hc_n": 89,
+        "n_rows": 157,
+        "sz_n": 68
+      },
+      {
+        "agreement_with_analysis_reference": 1.0,
+        "bundle_name": "qwen3_ungated",
+        "cohort": "FBIRN",
+        "cross_validated_auc": 0.8339416058394159,
+        "diagnosis_agreement_n": 281,
+        "diagnosis_coverage": 0.9035369774919614,
+        "diagnosis_disagreement_n": 0,
+        "diagnosis_labeled_n": 281,
+        "hc_n": 144,
+        "n_rows": 311,
+        "sz_n": 137
+      },
+      {
+        "agreement_with_analysis_reference": 1.0,
+        "bundle_name": "qwen3_gated",
+        "cohort": "COBRE",
+        "cross_validated_auc": 0.7374421678783873,
+        "diagnosis_agreement_n": 157,
+        "diagnosis_coverage": 1.0,
+        "diagnosis_disagreement_n": 0,
+        "diagnosis_labeled_n": 157,
+        "hc_n": 89,
+        "n_rows": 157,
+        "sz_n": 68
+      },
+      {
+        "agreement_with_analysis_reference": 1.0,
+        "bundle_name": "qwen3_gated",
+        "cohort": "FBIRN",
+        "cross_validated_auc": 0.8339416058394159,
+        "diagnosis_agreement_n": 281,
+        "diagnosis_coverage": 0.9035369774919614,
+        "diagnosis_disagreement_n": 0,
+        "diagnosis_labeled_n": 281,
+        "hc_n": 144,
+        "n_rows": 311,
+        "sz_n": 137
+      }
+    ],
+    "sfnc_sensitivity": {
+      "COBRE": {
+        "clean_auc": 0.7352693324520818,
+        "diagnosis_flip_50_delta": -0.2289793874872435,
+        "global_diagnosis_inversion_control": -2.220446049250313e-17,
+        "global_sex_recode_control": 0.0,
+        "row_order_50_delta": -0.1331625908790482,
+        "row_order_fraction_of_gap": 0.5660006320890544
+      },
+      "FBIRN": {
+        "clean_auc": 0.824360513245033,
+        "diagnosis_flip_50_delta": -0.3395640408864028,
+        "global_diagnosis_inversion_control": 0.0,
+        "global_sex_recode_control": 0.0,
+        "row_order_50_delta": -0.2611858443708609,
+        "row_order_fraction_of_gap": 0.8052331702088293
+      }
+    }
+  },
+  "interface": {
+    "arms": {
+      "deterministic_reference": {
+        "action": 0.9826086956521739,
+        "action_given_commit": [
+          216,
+          220
+        ],
+        "case": 0.9521739130434783,
+        "committed_n": 220,
+        "coverage": 0.9565217391304348,
+        "exact_repair_on_targets": [
+          117,
+          124
+        ],
+        "label": 0.9521739130434783,
+        "label_given_commit": [
+          209,
+          220
+        ],
+        "label_missing": 0,
+        "n": 230,
+        "parse_success": 1.0,
+        "unsafe": 0.04782608695652174,
+        "unsafe_given_commit": 0.05
+      },
+      "gemma4_contract": {
+        "action": 0.7260869565217392,
+        "action_given_commit": [
+          157,
+          206
+        ],
+        "case": 0.6434782608695652,
+        "committed_n": 206,
+        "coverage": 0.8956521739130435,
+        "exact_repair_on_targets": [
+          98,
+          124
+        ],
+        "label": 0.8434782608695652,
+        "label_given_commit": [
+          183,
+          206
+        ],
+        "label_missing": 13,
+        "n": 230,
+        "parse_success": 1.0,
+        "unsafe": 0.2782608695652174,
+        "unsafe_given_commit": 0.3106796116504854
+      },
+      "gemma4_hidden": {
+        "action": 0.40869565217391307,
+        "action_given_commit": [
+          84,
+          167
+        ],
+        "case": 0.3869565217391304,
+        "committed_n": 167,
+        "coverage": 0.7260869565217392,
+        "exact_repair_on_targets": [
+          0,
+          124
+        ],
+        "label": 0.8565217391304348,
+        "label_given_commit": [
+          156,
+          167
+        ],
+        "label_missing": 22,
+        "n": 230,
+        "parse_success": 1.0,
+        "unsafe": 0.3782608695652174,
+        "unsafe_given_commit": 0.5209580838323353
+      },
+      "gemma4_visible": {
+        "action": 0.8304347826086956,
+        "action_given_commit": [
+          181,
+          211
+        ],
+        "case": 0.7652173913043478,
+        "committed_n": 211,
+        "coverage": 0.9173913043478261,
+        "exact_repair_on_targets": [
+          99,
+          124
+        ],
+        "label": 0.8695652173913043,
+        "label_given_commit": [
+          190,
+          211
+        ],
+        "label_missing": 9,
+        "n": 230,
+        "parse_success": 0.9695652173913043,
+        "unsafe": 0.19130434782608696,
+        "unsafe_given_commit": 0.20853080568720378
+      },
+      "qwen3_contract": {
+        "action": 0.43043478260869567,
+        "action_given_commit": [
+          89,
+          154
+        ],
+        "case": 0.34347826086956523,
+        "committed_n": 154,
+        "coverage": 0.6695652173913044,
+        "exact_repair_on_targets": [
+          63,
+          124
+        ],
+        "label": 0.7043478260869566,
+        "label_given_commit": [
+          131,
+          154
+        ],
+        "label_missing": 45,
+        "n": 230,
+        "parse_success": 1.0,
+        "unsafe": 0.34782608695652173,
+        "unsafe_given_commit": 0.5194805194805194
+      },
+      "qwen3_hidden": {
+        "action": 0.26521739130434785,
+        "action_given_commit": [
+          51,
+          94
+        ],
+        "case": 0.23043478260869565,
+        "committed_n": 94,
+        "coverage": 0.40869565217391307,
+        "exact_repair_on_targets": [
+          0,
+          124
+        ],
+        "label": 0.6,
+        "label_given_commit": [
+          88,
+          94
+        ],
+        "label_missing": 86,
+        "n": 230,
+        "parse_success": 1.0,
+        "unsafe": 0.2,
+        "unsafe_given_commit": 0.48936170212765956
+      },
+      "qwen3_visible": {
+        "action": 0.3739130434782609,
+        "action_given_commit": [
+          76,
+          142
+        ],
+        "case": 0.2956521739130435,
+        "committed_n": 142,
+        "coverage": 0.6173913043478261,
+        "exact_repair_on_targets": [
+          51,
+          124
+        ],
+        "label": 0.7260869565217392,
+        "label_given_commit": [
+          120,
+          142
+        ],
+        "label_missing": 41,
+        "n": 230,
+        "parse_success": 1.0,
+        "unsafe": 0.3521739130434783,
+        "unsafe_given_commit": 0.5704225352112676
+      }
+    },
+    "contract": {
+      "gemma4": {
+        "boolean_false": 127,
+        "boolean_present": 207,
+        "boolean_true": 80,
+        "label_missing": 13,
+        "n": 230,
+        "parse_success": 230
+      },
+      "qwen3": {
+        "boolean_false": 105,
+        "boolean_present": 153,
+        "boolean_true": 48,
+        "label_missing": 45,
+        "n": 230,
+        "parse_success": 230
+      }
+    },
+    "contradictory_approvals": {
+      "gemma4": {
+        "contract": {
+          "count": 1,
+          "n": 91
+        },
+        "hidden": {
+          "count": 73,
+          "n": 91
+        },
+        "visible": {
+          "count": 3,
+          "n": 91
+        }
+      },
+      "qwen3": {
+        "contract": {
+          "count": 0,
+          "n": 91
+        },
+        "hidden": {
+          "count": 40,
+          "n": 91
+        },
+        "visible": {
+          "count": 0,
+          "n": 91
+        }
+      }
+    },
+    "contrasts": {
+      "gemma4": {
+        "action_correct": {
+          "ci_high": 0.513469470938837,
+          "ci_low": 0.33000878993072824,
+          "df": 15,
+          "estimate": 0.4217391304347826,
+          "mcnemar": {
+            "exact_p": 7.157152153718532e-18,
+            "left_only": 20,
+            "right_only": 117
+          },
+          "metric": "action_correct",
+          "n": 230,
+          "n_clusters": 16,
+          "se": 0.04303659952690249
+        },
+        "case_success": {
+          "ci_high": 0.4670165200043549,
+          "ci_low": 0.28950521912607985,
+          "df": 15,
+          "estimate": 0.3782608695652174,
+          "mcnemar": {
+            "exact_p": 1.4522538371319374e-15,
+            "left_only": 20,
+            "right_only": 107
+          },
+          "metric": "case_success",
+          "n": 230,
+          "n_clusters": 16,
+          "se": 0.04164098119236874
+        },
+        "label_correct": {
+          "ci_high": 0.11619960889813585,
+          "ci_low": -0.09011265237639673,
+          "df": 15,
+          "estimate": 0.013043478260869565,
+          "mcnemar": {
+            "exact_p": 0.711071103811264,
+            "left_only": 13,
+            "right_only": 16
+          },
+          "metric": "label_correct",
+          "n": 230,
+          "n_clusters": 16,
+          "se": 0.04839717217428889
+        }
+      },
+      "qwen3": {
+        "action_correct": {
+          "ci_high": 0.18100074688509218,
+          "ci_low": 0.0363905574627339,
+          "df": 15,
+          "estimate": 0.10869565217391304,
+          "mcnemar": {
+            "exact_p": 0.021086405713137638,
+            "left_only": 42,
+            "right_only": 67
+          },
+          "metric": "action_correct",
+          "n": 230,
+          "n_clusters": 16,
+          "se": 0.03392296799227771
+        },
+        "case_success": {
+          "ci_high": 0.13229189979901537,
+          "ci_low": -0.0018571171903197237,
+          "df": 15,
+          "estimate": 0.06521739130434782,
+          "mcnemar": {
+            "exact_p": 0.14617702864715262,
+            "left_only": 39,
+            "right_only": 54
+          },
+          "metric": "case_success",
+          "n": 230,
+          "n_clusters": 16,
+          "se": 0.03146896375492293
+        },
+        "label_correct": {
+          "ci_high": 0.2460136482340487,
+          "ci_low": 0.00616026480942955,
+          "df": 15,
+          "estimate": 0.12608695652173912,
+          "mcnemar": {
+            "exact_p": 2.4299079086631536e-06,
+            "left_only": 5,
+            "right_only": 34
+          },
+          "metric": "label_correct",
+          "n": 230,
+          "n_clusters": 16,
+          "se": 0.05626532045393249
+        }
+      }
+    },
+    "ucr_intersection": {
+      "gemma4": {
+        "hidden": 66,
+        "n": 66,
+        "visible": 3
+      },
+      "qwen3": {
+        "hidden": 36,
+        "n": 36,
+        "visible": 0
+      }
+    }
+  }
+}

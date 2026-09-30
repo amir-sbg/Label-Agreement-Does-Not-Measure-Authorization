@@ -1,0 +1,13 @@
+# Versions used to produce the paper results.
+h5py==3.14.0
+numpy==2.3.5
+openpyxl==3.1.5
+pandas==3.0.3
+pyyaml==6.0.3
+scikit-learn==1.9.0
+scipy==1.17.1
+xlrd==2.0.2
+torch==2.11.0
+transformers==5.12.1
+accelerate==1.14.0
+pytest
