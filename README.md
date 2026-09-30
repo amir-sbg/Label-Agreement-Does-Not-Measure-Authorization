@@ -18,7 +18,7 @@
 Official research code accompanying the paper:
 
 > **Label Agreement Does Not Measure Authorization**<br>
-> Submitted to the [AIM Workshop](https://aim-neurips26.github.io/) at [NeurIPS 2026](https://neurips.cc/)
+> Accepted to the [AIM Workshop](https://aim-neurips26.github.io/) at [NeurIPS 2026](https://neurips.cc/)
 
 This repository implements and audits a bounded LLM pipeline for harmonizing neuroimaging metadata across COBRE and FBIRN. The central result is that semantic label agreement alone does not establish that an agent was authorized by the available evidence, followed its output contract, or responded correctly when decisive evidence changed.
 
