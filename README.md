@@ -10,6 +10,7 @@
 
 <p align="center">
   <a href="https://neurips.cc/"><img src="https://img.shields.io/badge/NeurIPS-2026-7256B8.svg?labelColor=ECEAF4" alt="NeurIPS 2026"></a>
+  <a href="https://neurips.cc/virtual/2026/loc/atlanta/workshop/165443"><img src="https://img.shields.io/badge/NeurIPS-Page-4C72B0.svg" alt="NeurIPS page"></a>
   <a href="https://aim-neurips26.github.io/"><img src="https://img.shields.io/badge/AIM-Workshop-4C72B0.svg" alt="AIM Workshop"></a>
   <a href="https://arxiv.org/abs/2610.04544"><img src="https://img.shields.io/badge/arXiv-2610.04544-b31b1b.svg" alt="arXiv 2610.04544"></a>
   <img src="https://img.shields.io/badge/Python-3.11-3776AB.svg" alt="Python 3.11">
@@ -20,6 +21,7 @@ Official research code accompanying the paper:
 
 > **Label Agreement Does Not Measure Authorization**<br>
 > Accepted to the [AIM Workshop](https://aim-neurips26.github.io/) at [NeurIPS 2026](https://neurips.cc/)<br>
+> NeurIPS page: [official workshop listing](https://neurips.cc/virtual/2026/loc/atlanta/workshop/165443)<br>
 > arXiv: [2610.04544](https://arxiv.org/abs/2610.04544)
 
 This repository implements and audits a bounded LLM pipeline for harmonizing neuroimaging metadata across COBRE and FBIRN. The central result is that semantic label agreement alone does not establish that an agent was authorized by the available evidence, followed its output contract, or responded correctly when decisive evidence changed.
