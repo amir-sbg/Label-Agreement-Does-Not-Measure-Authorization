@@ -10,7 +10,8 @@
 
 <p align="center">
   <a href="https://neurips.cc/"><img src="https://img.shields.io/badge/NeurIPS-2026-7256B8.svg?labelColor=ECEAF4" alt="NeurIPS 2026"></a>
-  <a href="https://neurips.cc/virtual/2026/loc/atlanta/workshop/165443"><img src="https://img.shields.io/badge/NeurIPS-Page-4C72B0.svg" alt="NeurIPS page"></a>
+  <a href="https://neurips.cc/virtual/2026/loc/atlanta/workshop/137564"><img src="https://img.shields.io/badge/NeurIPS-Page-4C72B0.svg" alt="NeurIPS page"></a>
+  <a href="https://openreview.net/forum?id=X1mYBTqag6"><img src="https://img.shields.io/badge/OpenReview-Paper-4C72B0.svg" alt="OpenReview"></a>
   <a href="https://aim-neurips26.github.io/"><img src="https://img.shields.io/badge/AIM-Workshop-4C72B0.svg" alt="AIM Workshop"></a>
   <a href="https://arxiv.org/abs/2610.04544"><img src="https://img.shields.io/badge/arXiv-2610.04544-b31b1b.svg" alt="arXiv 2610.04544"></a>
   <img src="https://img.shields.io/badge/Python-3.11-3776AB.svg" alt="Python 3.11">
@@ -21,7 +22,8 @@ Official research code accompanying the paper:
 
 > **Label Agreement Does Not Measure Authorization**<br>
 > Accepted to the [AIM Workshop](https://aim-neurips26.github.io/) at [NeurIPS 2026](https://neurips.cc/)<br>
-> NeurIPS page: [official workshop listing](https://neurips.cc/virtual/2026/loc/atlanta/workshop/165443)<br>
+> NeurIPS workshop page: [official listing](https://neurips.cc/virtual/2026/loc/atlanta/workshop/137564)<br>
+> OpenReview: [paper](https://openreview.net/forum?id=X1mYBTqag6)<br>
 > arXiv: [2610.04544](https://arxiv.org/abs/2610.04544)
 
 This repository implements and audits a bounded LLM pipeline for harmonizing neuroimaging metadata across COBRE and FBIRN. The central result is that semantic label agreement alone does not establish that an agent was authorized by the available evidence, followed its output contract, or responded correctly when decisive evidence changed.
@@ -155,12 +157,16 @@ This code evaluates whether an agentic metadata-harmonization workflow is audita
 ## Citation
 
 ```bibtex
-@inproceedings{anonymous2026labelagreement,
+@inproceedings{sabbaghziarani2026label,
   title     = {Label Agreement Does Not Measure Authorization},
-  author    = {Anonymous},
-  booktitle = {NeurIPS 2026 Workshop on Agentic Intelligence for Medical Imaging and Multimodal Clinical Data},
+  author    = {Amir Sabbaghziarani and Bradley Thomas Baker and Theodore J. LaGrow and Sergey Plis},
+  booktitle = {AI Agents for Biomedical Imaging and Multimodal Clinical Data at NeurIPS 2026},
   year      = {2026},
-  url       = {https://arxiv.org/abs/2610.04544}
+  address   = {Atlanta, GA, USA},
+  url       = {https://openreview.net/forum?id=X1mYBTqag6},
+  eprint    = {2610.04544},
+  archivePrefix = {arXiv},
+  note      = {NeurIPS 2026 Workshop. Workshop page: \url{https://neurips.cc/virtual/2026/loc/atlanta/workshop/137564}}
 }
 ```
 
